@@ -4,3 +4,5 @@
 ./work
 ./trace*
 ./.nextflow*
+trace.txt
+.nextflow.log
