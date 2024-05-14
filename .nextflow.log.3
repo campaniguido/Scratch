@@ -1,0 +1,727 @@
+May-14 15:34:09.213 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config
+May-14 15:34:09.318 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+May-14 15:34:09.345 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/ieo6943/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+May-14 15:34:09.355 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-14 15:34:09.356 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-14 15:34:09.369 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-14 15:34:09.379 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-14 15:34:09.396 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/ieo6943/Documents/Guido/scratch/Scratch/config/nextflow.config
+May-14 15:34:09.397 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/ieo6943/Documents/Guido/scratch/Scratch/config/nextflow.config
+May-14 15:34:09.426 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `mamba_local`
+May-14 15:34:10.066 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [mamba_local]
+May-14 15:34:10.096 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+May-14 15:34:10.111 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [agitated_franklin] DSL2 - revision: 9d2bcf9bce
+May-14 15:34:10.112 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-14 15:34:10.112 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-14 15:34:10.121 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/ieo6943/.nextflow/secrets/store.json
+May-14 15:34:10.124 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@d535a3d] - activable => nextflow.secret.LocalSecretsProvider@d535a3d
+May-14 15:34:10.185 [main] DEBUG nextflow.Session - Session UUID: ed9ae6c0-026e-494b-9ccf-306ee3c2c781
+May-14 15:34:10.185 [main] DEBUG nextflow.Session - Run name: agitated_franklin
+May-14 15:34:10.186 [main] DEBUG nextflow.Session - Executor pool size: 8
+May-14 15:34:10.194 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+May-14 15:34:10.199 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+May-14 15:34:10.225 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (23:01 CEST)
+  System: Mac OS X 14.1.2
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 12558@MacBook-Pro-di-Campani.local [127.0.0.1]
+  CPUs: 8 - Mem: 16 GB (15.2 MB) - Swap: 3.2 GB (1.4 GB)
+May-14 15:34:10.238 [main] DEBUG nextflow.Session - Work-dir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work [Mac OS X]
+May-14 15:34:10.255 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-14 15:34:10.265 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-14 15:34:10.294 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-14 15:34:10.306 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+May-14 15:34:10.387 [main] DEBUG nextflow.Session - Session start
+May-14 15:34:10.392 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/ieo6943/Documents/Guido/scratch/Scratch/trace.txt
+May-14 15:34:10.631 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-14 15:34:11.056 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CONSENSUS_BAM` matches process FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM
+May-14 15:34:11.062 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-14 15:34:11.063 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-14 15:34:11.070 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+May-14 15:34:11.077 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+May-14 15:34:11.081 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-14 15:34:11.175 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CONSENSUS_TSV` matches process FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_TSV
+May-14 15:34:11.177 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-14 15:34:11.177 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-14 15:34:11.197 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CONSENSUS_BAM, FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM, CONSENSUS_TSV, FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_TSV
+May-14 15:34:11.198 [main] DEBUG nextflow.Session - Igniting dataflow network (3)
+May-14 15:34:11.206 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM
+May-14 15:34:11.207 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_TSV
+May-14 15:34:11.207 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_906effaecd9dc9db: /Users/ieo6943/Documents/Guido/scratch/Scratch/./subworkflows/filtering_collapsing/./modules/consensus_bam.nf
+  Script_8a5a270e63b7d016: /Users/ieo6943/Documents/Guido/scratch/Scratch/./subworkflows/filtering_collapsing/./modules/consensus_tsv.nf
+  Script_00212b26a8aca923: /Users/ieo6943/Documents/Guido/scratch/Scratch/./subworkflows/filtering_collapsing/main.nf
+  Script_cc1124b041122589: /Users/ieo6943/Documents/Guido/scratch/Scratch/main.nf
+May-14 15:34:11.208 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+May-14 15:34:11.208 [main] DEBUG nextflow.Session - Session await
+May-14 15:34:11.209 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/ieo6943/Documents/Guido/data/MDA_clones/cbc/; pattern: *; options: [type:dir]
+May-14 15:34:11.455 [Task submitter] WARN  n.executor.BashWrapperBuilder - Task runtime metrics are not reported when using macOS without a container engine
+May-14 15:34:11.478 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.484 [Task submitter] INFO  nextflow.Session - [c0/2188eb] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)
+May-14 15:34:11.498 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.499 [Task submitter] INFO  nextflow.Session - [28/9339f7] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)
+May-14 15:34:11.510 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.511 [Task submitter] INFO  nextflow.Session - [62/448bba] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)
+May-14 15:34:11.521 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.522 [Task submitter] INFO  nextflow.Session - [dc/85c843] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)
+May-14 15:34:11.546 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.547 [Task submitter] INFO  nextflow.Session - [c7/12c90d] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)
+May-14 15:34:11.562 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.563 [Task submitter] INFO  nextflow.Session - [85/ac82a9] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)
+May-14 15:34:11.575 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.577 [Task submitter] INFO  nextflow.Session - [4e/1e87de] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)
+May-14 15:34:11.619 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.631 [Task submitter] INFO  nextflow.Session - [ad/e65c75] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)
+May-14 15:34:11.666 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c0/2188ebf1fc0f6852abe30752550866]
+May-14 15:34:11.675 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/c0/2188ebf1fc0f6852abe30752550866
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)` terminated with an error exit status (127)
+May-14 15:34:11.677 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.678 [Task submitter] INFO  nextflow.Session - [7e/b10680] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)
+May-14 15:34:11.688 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c0/2188eb] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.697 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/28/9339f788d30bde55a6c157d5cbd5c4]
+May-14 15:34:11.697 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/28/9339f788d30bde55a6c157d5cbd5c4
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)` terminated with an error exit status (127)
+May-14 15:34:11.698 [Task monitor] INFO  nextflow.processor.TaskProcessor - [28/9339f7] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/62/448bba1b6c842d6959396e5561279f]
+May-14 15:34:11.705 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/62/448bba1b6c842d6959396e5561279f
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)` terminated with an error exit status (127)
+May-14 15:34:11.707 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.707 [Task monitor] INFO  nextflow.processor.TaskProcessor - [62/448bba] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.707 [Task submitter] INFO  nextflow.Session - [0b/a6a1ce] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)
+May-14 15:34:11.713 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/dc/85c843885eae6971ae220fef6e9869]
+May-14 15:34:11.713 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/dc/85c843885eae6971ae220fef6e9869
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)` terminated with an error exit status (127)
+May-14 15:34:11.714 [Task monitor] INFO  nextflow.processor.TaskProcessor - [dc/85c843] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.718 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.718 [Task submitter] INFO  nextflow.Session - [1c/411ecf] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)
+May-14 15:34:11.719 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c7/12c90d3279c53749006d20477a07b7]
+May-14 15:34:11.720 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/c7/12c90d3279c53749006d20477a07b7
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)` terminated with an error exit status (127)
+May-14 15:34:11.723 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c7/12c90d] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.727 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/85/ac82a94174ecab9d8fd5fe8a1705b8]
+May-14 15:34:11.729 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/85/ac82a94174ecab9d8fd5fe8a1705b8
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)` terminated with an error exit status (127)
+May-14 15:34:11.731 [Task monitor] INFO  nextflow.processor.TaskProcessor - [85/ac82a9] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.733 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.735 [Task submitter] INFO  nextflow.Session - [86/b0132e] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)
+May-14 15:34:11.763 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/4e/1e87de90b2167103d1ef0407e07405]
+May-14 15:34:11.763 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/4e/1e87de90b2167103d1ef0407e07405
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)` terminated with an error exit status (127)
+May-14 15:34:11.766 [Task monitor] INFO  nextflow.processor.TaskProcessor - [4e/1e87de] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.780 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/ad/e65c759c2637ee892d745854384471]
+May-14 15:34:11.781 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/ad/e65c759c2637ee892d745854384471
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)` terminated with an error exit status (127)
+May-14 15:34:11.782 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.782 [Task submitter] INFO  nextflow.Session - [e5/e12f3e] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)
+May-14 15:34:11.782 [Task monitor] INFO  nextflow.processor.TaskProcessor - [ad/e65c75] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.803 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.804 [Task submitter] INFO  nextflow.Session - [d5/d58b56] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)
+May-14 15:34:11.829 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.831 [Task submitter] INFO  nextflow.Session - [2a/0957e3] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)
+May-14 15:34:11.840 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/7e/b106808792f85476d40b41e01b6428]
+May-14 15:34:11.844 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/7e/b106808792f85476d40b41e01b6428
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)` terminated with an error exit status (127)
+May-14 15:34:11.846 [Task monitor] INFO  nextflow.processor.TaskProcessor - [7e/b10680] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/0b/a6a1ce0925e534872e0f6fc7d79e18]
+May-14 15:34:11.849 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/0b/a6a1ce0925e534872e0f6fc7d79e18
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)` terminated with an error exit status (127)
+May-14 15:34:11.850 [Task monitor] INFO  nextflow.processor.TaskProcessor - [0b/a6a1ce] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/1c/411ecfec1797014613431c6611057a]
+May-14 15:34:11.861 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/1c/411ecfec1797014613431c6611057a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)` terminated with an error exit status (127)
+May-14 15:34:11.864 [Task monitor] INFO  nextflow.processor.TaskProcessor - [1c/411ecf] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.865 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.866 [Task submitter] INFO  nextflow.Session - [41/4eee2f] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)
+May-14 15:34:11.868 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/86/b0132ef097195cbe8ac881b05e1aa9]
+May-14 15:34:11.871 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/86/b0132ef097195cbe8ac881b05e1aa9
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127)
+May-14 15:34:11.872 [Task monitor] INFO  nextflow.processor.TaskProcessor - [86/b0132e] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.895 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.895 [Task submitter] INFO  nextflow.Session - [80/2302bb] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)
+May-14 15:34:11.910 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.911 [Task submitter] INFO  nextflow.Session - [69/74cc98] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)
+May-14 15:34:11.912 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e5/e12f3eeb444cafeedc8ee000d46bfd]
+May-14 15:34:11.913 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/e5/e12f3eeb444cafeedc8ee000d46bfd
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127)
+May-14 15:34:11.914 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e5/e12f3e] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.922 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d5/d58b563db38674c8be89bbeec45809]
+May-14 15:34:11.923 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d5/d58b563db38674c8be89bbeec45809
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127)
+May-14 15:34:11.924 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d5/d58b56] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.935 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.936 [Task submitter] INFO  nextflow.Session - [6c/04acd9] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)
+May-14 15:34:11.939 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/2a/0957e3c17483e565de996c8174f9fe]
+May-14 15:34:11.940 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/2a/0957e3c17483e565de996c8174f9fe
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)` terminated with an error exit status (127)
+May-14 15:34:11.940 [Task monitor] INFO  nextflow.processor.TaskProcessor - [2a/0957e3] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:11.954 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.954 [Task submitter] INFO  nextflow.Session - [da/f7ba3e] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)
+May-14 15:34:11.973 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:11.974 [Task submitter] INFO  nextflow.Session - [5e/5800cb] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)
+May-14 15:34:11.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/41/4eee2f4c6380da8a7aceb69b371cb0]
+May-14 15:34:11.984 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/41/4eee2f4c6380da8a7aceb69b371cb0
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)` terminated with an error exit status (127)
+May-14 15:34:12.015 [Task monitor] INFO  nextflow.processor.TaskProcessor - [41/4eee2f] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.023 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/80/2302bbe178afb74d769e8923b86e5a]
+May-14 15:34:12.023 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/80/2302bbe178afb74d769e8923b86e5a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)` terminated with an error exit status (127)
+May-14 15:34:12.025 [Task monitor] INFO  nextflow.processor.TaskProcessor - [80/2302bb] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.029 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/69/74cc9847e6180075fede64f9c6b4e6]
+May-14 15:34:12.030 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/69/74cc9847e6180075fede64f9c6b4e6
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)` terminated with an error exit status (127)
+May-14 15:34:12.031 [Task monitor] INFO  nextflow.processor.TaskProcessor - [69/74cc98] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.032 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.032 [Task submitter] INFO  nextflow.Session - [97/531d04] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)
+May-14 15:34:12.045 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.045 [Task submitter] INFO  nextflow.Session - [d0/3bb9f8] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)
+May-14 15:34:12.056 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/6c/04acd9187d8eeb0c1acfdbb0cd6edd]
+May-14 15:34:12.056 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/6c/04acd9187d8eeb0c1acfdbb0cd6edd
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)` terminated with an error exit status (127)
+May-14 15:34:12.057 [Task monitor] INFO  nextflow.processor.TaskProcessor - [6c/04acd9] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.062 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.063 [Task submitter] INFO  nextflow.Session - [c8/cdc34c] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)
+May-14 15:34:12.069 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/da/f7ba3e2f098daaa824c2b8177e2667]
+May-14 15:34:12.069 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/da/f7ba3e2f098daaa824c2b8177e2667
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)` terminated with an error exit status (127)
+May-14 15:34:12.071 [Task monitor] INFO  nextflow.processor.TaskProcessor - [da/f7ba3e] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.078 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.079 [Task submitter] INFO  nextflow.Session - [49/851a7e] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)
+May-14 15:34:12.090 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/5e/5800cb64f74f574385395e9b6f4799]
+May-14 15:34:12.090 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/5e/5800cb64f74f574385395e9b6f4799
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)` terminated with an error exit status (127)
+May-14 15:34:12.091 [Task monitor] INFO  nextflow.processor.TaskProcessor - [5e/5800cb] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.093 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.098 [Task submitter] INFO  nextflow.Session - [c8/0eddde] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)
+May-14 15:34:12.117 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.118 [Task submitter] INFO  nextflow.Session - [a8/e89fa7] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27)
+May-14 15:34:12.148 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/97/531d040cbb10e01258477e66b08948]
+May-14 15:34:12.149 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/97/531d040cbb10e01258477e66b08948
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)` terminated with an error exit status (127)
+May-14 15:34:12.151 [Task monitor] INFO  nextflow.processor.TaskProcessor - [97/531d04] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.158 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.159 [Task submitter] INFO  nextflow.Session - [6f/7f5f37] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28)
+May-14 15:34:12.172 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.172 [Task submitter] INFO  nextflow.Session - [73/530da8] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29)
+May-14 15:34:12.181 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d0/3bb9f8fb3b51442f607a4b496f2de2]
+May-14 15:34:12.182 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d0/3bb9f8fb3b51442f607a4b496f2de2
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)` terminated with an error exit status (127)
+May-14 15:34:12.183 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d0/3bb9f8] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.191 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c8/cdc34ca244fa365d6d4cf8398b0885]
+May-14 15:34:12.192 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/c8/cdc34ca244fa365d6d4cf8398b0885
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)` terminated with an error exit status (127)
+May-14 15:34:12.193 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c8/cdc34c] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.200 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.200 [Task submitter] INFO  nextflow.Session - [04/92fa2e] Submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30)
+May-14 15:34:12.217 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.217 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/49/851a7e94f2bb024fa45e5ea9a23132]
+May-14 15:34:12.218 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/49/851a7e94f2bb024fa45e5ea9a23132
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)` terminated with an error exit status (127)
+May-14 15:34:12.218 [Task submitter] INFO  nextflow.Session - [5f/7c3c42] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)
+May-14 15:34:12.219 [Task monitor] INFO  nextflow.processor.TaskProcessor - [49/851a7e] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.226 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c8/0eddde3b1a35d58af7aa180ccd17f1]
+May-14 15:34:12.228 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/c8/0eddde3b1a35d58af7aa180ccd17f1
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)` terminated with an error exit status (127)
+May-14 15:34:12.229 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c8/0eddde] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.242 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.243 [Task submitter] INFO  nextflow.Session - [6f/c06e3b] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)
+May-14 15:34:12.287 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/a8/e89fa734b95d27d74567139d52b53b]
+May-14 15:34:12.288 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/a8/e89fa734b95d27d74567139d52b53b
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27)` terminated with an error exit status (127)
+May-14 15:34:12.288 [Task monitor] INFO  nextflow.processor.TaskProcessor - [a8/e89fa7] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.295 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/6f/7f5f373f5bba5914cbf69a127be7b4]
+May-14 15:34:12.295 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/6f/7f5f373f5bba5914cbf69a127be7b4
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28)` terminated with an error exit status (127)
+May-14 15:34:12.297 [Task monitor] INFO  nextflow.processor.TaskProcessor - [6f/7f5f37] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.301 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/73/530da8663ef450f388fcd58502318c]
+May-14 15:34:12.302 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/73/530da8663ef450f388fcd58502318c
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29)` terminated with an error exit status (127)
+May-14 15:34:12.304 [Task monitor] INFO  nextflow.processor.TaskProcessor - [73/530da8] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.331 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/04/92fa2e467d89200b83530e07590a42]
+May-14 15:34:12.335 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/04/92fa2e467d89200b83530e07590a42
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30)` terminated with an error exit status (127)
+May-14 15:34:12.339 [Task monitor] INFO  nextflow.processor.TaskProcessor - [04/92fa2e] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30)` terminated with an error exit status (127) -- Execution is retried (1)
+May-14 15:34:12.371 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/5f/7c3c42c8d656d09c952ec1886a21a0]
+May-14 15:34:12.371 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/5f/7c3c42c8d656d09c952ec1886a21a0
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)` terminated with an error exit status (127)
+May-14 15:34:12.372 [Task monitor] INFO  nextflow.processor.TaskProcessor - [5f/7c3c42] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.376 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.375 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/6f/c06e3b1c68b465b812b348c7809ce0]
+May-14 15:34:12.376 [Task submitter] INFO  nextflow.Session - [03/53444f] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)
+May-14 15:34:12.376 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/6f/c06e3b1c68b465b812b348c7809ce0
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)` terminated with an error exit status (127)
+May-14 15:34:12.377 [Task monitor] INFO  nextflow.processor.TaskProcessor - [6f/c06e3b] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.388 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.389 [Task submitter] INFO  nextflow.Session - [7b/192060] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)
+May-14 15:34:12.399 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.400 [Task submitter] INFO  nextflow.Session - [d5/ebfc89] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)
+May-14 15:34:12.417 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.418 [Task submitter] INFO  nextflow.Session - [07/6f1639] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)
+May-14 15:34:12.439 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.440 [Task submitter] INFO  nextflow.Session - [74/2f9c75] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)
+May-14 15:34:12.469 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.471 [Task submitter] INFO  nextflow.Session - [e1/09706b] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)
+May-14 15:34:12.504 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/03/53444f92a88b0eaba0e9765bcccdf5]
+May-14 15:34:12.505 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/03/53444f92a88b0eaba0e9765bcccdf5
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)` terminated with an error exit status (127)
+May-14 15:34:12.505 [Task monitor] INFO  nextflow.processor.TaskProcessor - [03/53444f] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.521 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/7b/1920607fe734f2c499d769d2725748]
+May-14 15:34:12.521 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/7b/1920607fe734f2c499d769d2725748
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)` terminated with an error exit status (127)
+May-14 15:34:12.522 [Task monitor] INFO  nextflow.processor.TaskProcessor - [7b/192060] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.528 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d5/ebfc89511cb0e753ed92d50431ac47]
+May-14 15:34:12.533 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d5/ebfc89511cb0e753ed92d50431ac47
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)` terminated with an error exit status (127)
+May-14 15:34:12.534 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d5/ebfc89] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.555 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.555 [Task submitter] INFO  nextflow.Session - [13/2934e3] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)
+May-14 15:34:12.567 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/07/6f1639339cd405cbd6d749d2b0006d]
+May-14 15:34:12.567 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/07/6f1639339cd405cbd6d749d2b0006d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)` terminated with an error exit status (127)
+May-14 15:34:12.567 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.568 [Task monitor] INFO  nextflow.processor.TaskProcessor - [07/6f1639] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.568 [Task submitter] INFO  nextflow.Session - [fa/217b10] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)
+May-14 15:34:12.573 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/74/2f9c75a7699af9fc12324c79f19207]
+May-14 15:34:12.574 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/74/2f9c75a7699af9fc12324c79f19207
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)` terminated with an error exit status (127)
+May-14 15:34:12.575 [Task monitor] INFO  nextflow.processor.TaskProcessor - [74/2f9c75] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.588 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.588 [Task submitter] INFO  nextflow.Session - [1b/899b66] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)
+May-14 15:34:12.590 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e1/09706bbc5f8055c0e92d017e53486d]
+May-14 15:34:12.591 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/e1/09706bbc5f8055c0e92d017e53486d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)` terminated with an error exit status (127)
+May-14 15:34:12.592 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e1/09706b] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.601 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.603 [Task submitter] INFO  nextflow.Session - [33/8607a4] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)
+May-14 15:34:12.621 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.621 [Task submitter] INFO  nextflow.Session - [e3/bd44ce] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)
+May-14 15:34:12.636 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.636 [Task submitter] INFO  nextflow.Session - [c5/2285d9] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)
+May-14 15:34:12.673 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/13/2934e3c08cca06bd9d93d9db7e33c0]
+May-14 15:34:12.684 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/13/2934e3c08cca06bd9d93d9db7e33c0
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)` terminated with an error exit status (127)
+May-14 15:34:12.687 [Task monitor] INFO  nextflow.processor.TaskProcessor - [13/2934e3] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.695 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/fa/217b106355372b307973893dfc590d]
+May-14 15:34:12.698 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/fa/217b106355372b307973893dfc590d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)` terminated with an error exit status (127)
+May-14 15:34:12.700 [Task monitor] INFO  nextflow.processor.TaskProcessor - [fa/217b10] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.712 [Task submitter] INFO  nextflow.Session - [57/2ff705] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)
+May-14 15:34:12.716 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/1b/899b66fd06df6b0d77138143789523]
+May-14 15:34:12.717 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/1b/899b66fd06df6b0d77138143789523
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)` terminated with an error exit status (127)
+May-14 15:34:12.718 [Task monitor] INFO  nextflow.processor.TaskProcessor - [1b/899b66] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/33/8607a4b6e150ae1182fdf419ae4e18]
+May-14 15:34:12.734 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/33/8607a4b6e150ae1182fdf419ae4e18
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127)
+May-14 15:34:12.735 [Task monitor] INFO  nextflow.processor.TaskProcessor - [33/8607a4] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.747 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.747 [Task submitter] INFO  nextflow.Session - [b9/ee674b] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)
+May-14 15:34:12.750 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e3/bd44ce8e404be8f10bbca7bfac4db0]
+May-14 15:34:12.750 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/e3/bd44ce8e404be8f10bbca7bfac4db0
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127)
+May-14 15:34:12.751 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e3/bd44ce] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.764 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c5/2285d95bf63437d0ab3815e74af7a8]
+May-14 15:34:12.765 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/c5/2285d95bf63437d0ab3815e74af7a8
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127)
+May-14 15:34:12.765 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c5/2285d9] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.781 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.782 [Task submitter] INFO  nextflow.Session - [f3/0c0f1d] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)
+May-14 15:34:12.796 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.797 [Task submitter] INFO  nextflow.Session - [3d/61716f] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)
+May-14 15:34:12.804 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/57/2ff7050783f6c5bbe3d53f4ddfe737]
+May-14 15:34:12.804 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/57/2ff7050783f6c5bbe3d53f4ddfe737
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)` terminated with an error exit status (127)
+May-14 15:34:12.805 [Task monitor] INFO  nextflow.processor.TaskProcessor - [57/2ff705] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.834 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.836 [Task submitter] INFO  nextflow.Session - [b5/52b8c8] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)
+May-14 15:34:12.845 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.845 [Task submitter] INFO  nextflow.Session - [20/f15ddf] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)
+May-14 15:34:12.861 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.863 [Task submitter] INFO  nextflow.Session - [69/41513d] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)
+May-14 15:34:12.871 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.872 [Task submitter] INFO  nextflow.Session - [8c/fe3137] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)
+May-14 15:34:12.877 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b9/ee674b96d278d53818cfc10c132b95]
+May-14 15:34:12.878 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/b9/ee674b96d278d53818cfc10c132b95
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)` terminated with an error exit status (127)
+May-14 15:34:12.878 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b9/ee674b] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.886 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.887 [Task submitter] INFO  nextflow.Session - [5e/f3dc26] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)
+May-14 15:34:12.910 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:12.916 [Task submitter] INFO  nextflow.Session - [d4/902f92] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)
+May-14 15:34:12.933 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/f3/0c0f1d4bdc319a4547c39789ddf984]
+May-14 15:34:12.935 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/f3/0c0f1d4bdc319a4547c39789ddf984
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)` terminated with an error exit status (127)
+May-14 15:34:12.942 [Task monitor] INFO  nextflow.processor.TaskProcessor - [f3/0c0f1d] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.951 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/3d/61716fe2c6060e64d4d4850f7e87d9]
+May-14 15:34:12.952 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/3d/61716fe2c6060e64d4d4850f7e87d9
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)` terminated with an error exit status (127)
+May-14 15:34:12.953 [Task monitor] INFO  nextflow.processor.TaskProcessor - [3d/61716f] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.974 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b5/52b8c8ec4cb8544a14d252cb7817c6]
+May-14 15:34:12.975 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/b5/52b8c8ec4cb8544a14d252cb7817c6
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)` terminated with an error exit status (127)
+May-14 15:34:12.976 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b5/52b8c8] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/20/f15ddfc56cfc4f12a59798e4c915f6]
+May-14 15:34:12.990 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/20/f15ddfc56cfc4f12a59798e4c915f6
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)` terminated with an error exit status (127)
+May-14 15:34:12.992 [Task monitor] INFO  nextflow.processor.TaskProcessor - [20/f15ddf] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:12.999 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/69/41513df86d9ca58004807034d8164d]
+May-14 15:34:13.000 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/69/41513df86d9ca58004807034d8164d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)` terminated with an error exit status (127)
+May-14 15:34:13.001 [Task monitor] INFO  nextflow.processor.TaskProcessor - [69/41513d] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.012 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/8c/fe313744bf6d5503c3cac6baab8366]
+May-14 15:34:13.013 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/8c/fe313744bf6d5503c3cac6baab8366
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)` terminated with an error exit status (127)
+May-14 15:34:13.014 [Task monitor] INFO  nextflow.processor.TaskProcessor - [8c/fe3137] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.023 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/5e/f3dc2648d457b5acbb19e1ce91279d]
+May-14 15:34:13.024 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/5e/f3dc2648d457b5acbb19e1ce91279d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)` terminated with an error exit status (127)
+May-14 15:34:13.025 [Task monitor] INFO  nextflow.processor.TaskProcessor - [5e/f3dc26] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.033 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.034 [Task submitter] INFO  nextflow.Session - [11/04c148] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)
+May-14 15:34:13.044 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.044 [Task submitter] INFO  nextflow.Session - [ba/7f3a0b] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)
+May-14 15:34:13.046 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d4/902f92badf41bf4f08e1e815f849f8]
+May-14 15:34:13.046 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d4/902f92badf41bf4f08e1e815f849f8
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)` terminated with an error exit status (127)
+May-14 15:34:13.048 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d4/902f92] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.062 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.062 [Task submitter] INFO  nextflow.Session - [b8/170ced] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27)
+May-14 15:34:13.073 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.073 [Task submitter] INFO  nextflow.Session - [b4/484830] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28)
+May-14 15:34:13.081 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.081 [Task submitter] INFO  nextflow.Session - [38/a690cc] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29)
+May-14 15:34:13.090 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.091 [Task submitter] INFO  nextflow.Session - [bc/fe16e2] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30)
+May-14 15:34:13.103 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.104 [Task submitter] INFO  nextflow.Session - [a8/456045] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)
+May-14 15:34:13.114 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.114 [Task submitter] INFO  nextflow.Session - [21/53b9c0] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)
+May-14 15:34:13.242 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/11/04c1481c3ade5d304fbaf0d9f578cc]
+May-14 15:34:13.243 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/11/04c1481c3ade5d304fbaf0d9f578cc
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)` terminated with an error exit status (127)
+May-14 15:34:13.244 [Task monitor] INFO  nextflow.processor.TaskProcessor - [11/04c148] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.248 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/ba/7f3a0bc053a4f55e4cb853e8d7efb7]
+May-14 15:34:13.249 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/ba/7f3a0bc053a4f55e4cb853e8d7efb7
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)` terminated with an error exit status (127)
+May-14 15:34:13.250 [Task monitor] INFO  nextflow.processor.TaskProcessor - [ba/7f3a0b] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.267 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b8/170ceda936ccc5442d4c567417f4b6]
+May-14 15:34:13.268 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/b8/170ceda936ccc5442d4c567417f4b6
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27)` terminated with an error exit status (127)
+May-14 15:34:13.269 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b8/170ced] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (27)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.274 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b4/48483091dce29891ff31b2e826407c]
+May-14 15:34:13.275 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/b4/48483091dce29891ff31b2e826407c
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28)` terminated with an error exit status (127)
+May-14 15:34:13.277 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b4/484830] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (28)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.285 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.286 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/38/a690cc9ee9ff9dbcfd3aa6e92af96d]
+May-14 15:34:13.286 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/38/a690cc9ee9ff9dbcfd3aa6e92af96d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29)` terminated with an error exit status (127)
+May-14 15:34:13.286 [Task submitter] INFO  nextflow.Session - [52/e9f7a2] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)
+May-14 15:34:13.287 [Task monitor] INFO  nextflow.processor.TaskProcessor - [38/a690cc] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (29)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.294 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/bc/fe16e2a41d56e6e4eb34286e8ca88a]
+May-14 15:34:13.294 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/bc/fe16e2a41d56e6e4eb34286e8ca88a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30)` terminated with an error exit status (127)
+May-14 15:34:13.295 [Task monitor] INFO  nextflow.processor.TaskProcessor - [bc/fe16e2] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (30)` terminated with an error exit status (127) -- Execution is retried (2)
+May-14 15:34:13.298 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/a8/456045e7aa65eb735df7fb2d50d500]
+May-14 15:34:13.298 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/a8/456045e7aa65eb735df7fb2d50d500
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)` terminated with an error exit status (127)
+May-14 15:34:13.299 [Task monitor] INFO  nextflow.processor.TaskProcessor - [a8/456045] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (6)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.300 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.300 [Task submitter] INFO  nextflow.Session - [bd/9a6319] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)
+May-14 15:34:13.302 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/21/53b9c0d5834fc5fc15a9a699e34f8c]
+May-14 15:34:13.302 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/21/53b9c0d5834fc5fc15a9a699e34f8c
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)` terminated with an error exit status (127)
+May-14 15:34:13.303 [Task monitor] INFO  nextflow.processor.TaskProcessor - [21/53b9c0] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (2)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.319 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.319 [Task submitter] INFO  nextflow.Session - [d6/0a0e59] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)
+May-14 15:34:13.329 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.330 [Task submitter] INFO  nextflow.Session - [37/2c1bdb] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)
+May-14 15:34:13.355 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.357 [Task submitter] INFO  nextflow.Session - [dd/0e4e68] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)
+May-14 15:34:13.371 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.371 [Task submitter] INFO  nextflow.Session - [d4/ee9b3b] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)
+May-14 15:34:13.380 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.381 [Task submitter] INFO  nextflow.Session - [a6/3da7fe] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)
+May-14 15:34:13.413 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.413 [Task submitter] INFO  nextflow.Session - [02/fe1e61] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)
+May-14 15:34:13.470 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/52/e9f7a28faba805d02afa4172511941]
+May-14 15:34:13.493 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/52/e9f7a28faba805d02afa4172511941
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)` terminated with an error exit status (127)
+May-14 15:34:13.494 [Task monitor] INFO  nextflow.processor.TaskProcessor - [52/e9f7a2] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (5)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.498 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/bd/9a63197c0c5eb98a560d3d6724256b]
+May-14 15:34:13.498 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/bd/9a63197c0c5eb98a560d3d6724256b
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)` terminated with an error exit status (127)
+May-14 15:34:13.500 [Task monitor] INFO  nextflow.processor.TaskProcessor - [bd/9a6319] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (7)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.504 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d6/0a0e592527162ed1f0a4a6a6f4033e]
+May-14 15:34:13.504 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d6/0a0e592527162ed1f0a4a6a6f4033e
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)` terminated with an error exit status (127)
+May-14 15:34:13.505 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d6/0a0e59] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (4)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.508 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/37/2c1bdb92e610a3f38143561ce4441a]
+May-14 15:34:13.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/37/2c1bdb92e610a3f38143561ce4441a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)` terminated with an error exit status (127)
+May-14 15:34:13.510 [Task monitor] INFO  nextflow.processor.TaskProcessor - [37/2c1bdb] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (3)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.512 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/dd/0e4e68530e630380d6c7e1ead4b785]
+May-14 15:34:13.513 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/dd/0e4e68530e630380d6c7e1ead4b785
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)` terminated with an error exit status (127)
+May-14 15:34:13.514 [Task monitor] INFO  nextflow.processor.TaskProcessor - [dd/0e4e68] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (8)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.524 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d4/ee9b3b7767337ebf212b01d51d013b]
+May-14 15:34:13.525 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d4/ee9b3b7767337ebf212b01d51d013b
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)` terminated with an error exit status (127)
+May-14 15:34:13.526 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d4/ee9b3b] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (1)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/a6/3da7fef5aca8e574854f93358ba5df]
+May-14 15:34:13.537 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/a6/3da7fef5aca8e574854f93358ba5df
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)` terminated with an error exit status (127)
+May-14 15:34:13.538 [Task monitor] INFO  nextflow.processor.TaskProcessor - [a6/3da7fe] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (10)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.548 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.549 [Task submitter] INFO  nextflow.Session - [8a/bafdd1] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)
+May-14 15:34:13.562 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/02/fe1e616348400fa6ce8bdf58a06e9a]
+May-14 15:34:13.563 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/02/fe1e616348400fa6ce8bdf58a06e9a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)` terminated with an error exit status (127)
+May-14 15:34:13.566 [Task monitor] INFO  nextflow.processor.TaskProcessor - [02/fe1e61] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (9)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.573 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.574 [Task submitter] INFO  nextflow.Session - [fc/01c615] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)
+May-14 15:34:13.584 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.584 [Task submitter] INFO  nextflow.Session - [f2/9a9737] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)
+May-14 15:34:13.593 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.594 [Task submitter] INFO  nextflow.Session - [2f/3c920f] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)
+May-14 15:34:13.605 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.607 [Task submitter] INFO  nextflow.Session - [1d/ea7f5e] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)
+May-14 15:34:13.619 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.619 [Task submitter] INFO  nextflow.Session - [e0/ab1455] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)
+May-14 15:34:13.629 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.629 [Task submitter] INFO  nextflow.Session - [c5/e1a30d] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)
+May-14 15:34:13.677 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.720 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/8a/bafdd1e14ef78cff7ce30d9c4f8bad]
+May-14 15:34:13.720 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/8a/bafdd1e14ef78cff7ce30d9c4f8bad
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)` terminated with an error exit status (127)
+May-14 15:34:13.722 [Task monitor] INFO  nextflow.processor.TaskProcessor - [8a/bafdd1] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (11)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.727 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/fc/01c61515100d86fc7a955ca52ac427]
+May-14 15:34:13.728 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/fc/01c61515100d86fc7a955ca52ac427
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127)
+May-14 15:34:13.730 [Task monitor] INFO  nextflow.processor.TaskProcessor - [fc/01c615] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/f2/9a9737575c1f0adedd126204379b71]
+May-14 15:34:13.734 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/f2/9a9737575c1f0adedd126204379b71
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127)
+May-14 15:34:13.736 [Task monitor] INFO  nextflow.processor.TaskProcessor - [f2/9a9737] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.737 [Task submitter] INFO  nextflow.Session - [4d/07e94b] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)
+May-14 15:34:13.743 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/2f/3c920fd2265944d238b5ee9e2d7437]
+May-14 15:34:13.747 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/2f/3c920fd2265944d238b5ee9e2d7437
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127)
+May-14 15:34:13.748 [Task monitor] INFO  nextflow.processor.TaskProcessor - [2f/3c920f] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.751 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/1d/ea7f5e1c3a534ca83b974eb6c97143]
+May-14 15:34:13.751 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/1d/ea7f5e1c3a534ca83b974eb6c97143
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)` terminated with an error exit status (127)
+May-14 15:34:13.752 [Task monitor] INFO  nextflow.processor.TaskProcessor - [1d/ea7f5e] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.770 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e0/ab1455af69ec7365619c19c173e5ff]
+May-14 15:34:13.770 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/e0/ab1455af69ec7365619c19c173e5ff
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)` terminated with an error exit status (127)
+May-14 15:34:13.774 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e0/ab1455] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (15)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.776 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c5/e1a30df81686af354f6d86d933325a]
+May-14 15:34:13.776 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.776 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/c5/e1a30df81686af354f6d86d933325a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)` terminated with an error exit status (127)
+May-14 15:34:13.776 [Task submitter] INFO  nextflow.Session - [d3/59f9e8] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)
+May-14 15:34:13.777 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c5/e1a30d] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (16)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.785 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.786 [Task submitter] INFO  nextflow.Session - [e6/71564a] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)
+May-14 15:34:13.794 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.794 [Task submitter] INFO  nextflow.Session - [61/31363f] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)
+May-14 15:34:13.823 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.823 [Task submitter] INFO  nextflow.Session - [65/42ae05] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)
+May-14 15:34:13.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/4d/07e94b21e3a32e3a1bb9c621f1f5d9]
+May-14 15:34:13.825 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/4d/07e94b21e3a32e3a1bb9c621f1f5d9
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)` terminated with an error exit status (127)
+May-14 15:34:13.826 [Task monitor] INFO  nextflow.processor.TaskProcessor - [4d/07e94b] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (17)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.834 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.834 [Task submitter] INFO  nextflow.Session - [e7/4d8226] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)
+May-14 15:34:13.850 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.851 [Task submitter] INFO  nextflow.Session - [13/893680] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)
+May-14 15:34:13.866 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.866 [Task submitter] INFO  nextflow.Session - [68/858b35] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)
+May-14 15:34:13.885 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:13.886 [Task submitter] INFO  nextflow.Session - [a7/67bc44] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)
+May-14 15:34:13.933 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d3/59f9e834bd895f111165bb0d176a4f]
+May-14 15:34:13.937 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/d3/59f9e834bd895f111165bb0d176a4f
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)` terminated with an error exit status (127)
+May-14 15:34:13.939 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d3/59f9e8] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (20)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e6/71564a6dce47eec06e103f4f3cbd4e]
+May-14 15:34:13.945 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/e6/71564a6dce47eec06e103f4f3cbd4e
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)` terminated with an error exit status (127)
+May-14 15:34:13.946 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e6/71564a] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (18)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.950 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/61/31363f6e6ee1dc3f765755d1eebe70]
+May-14 15:34:13.951 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/61/31363f6e6ee1dc3f765755d1eebe70
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)` terminated with an error exit status (127)
+May-14 15:34:13.951 [Task monitor] INFO  nextflow.processor.TaskProcessor - [61/31363f] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (21)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.975 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/65/42ae05fa20b21679c5effc5daee79a]
+May-14 15:34:13.976 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/65/42ae05fa20b21679c5effc5daee79a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)` terminated with an error exit status (127)
+May-14 15:34:13.977 [Task monitor] INFO  nextflow.processor.TaskProcessor - [65/42ae05] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (22)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e7/4d82262a1f0e8892588385337fbbdd]
+May-14 15:34:13.987 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/e7/4d82262a1f0e8892588385337fbbdd
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)` terminated with an error exit status (127)
+May-14 15:34:13.988 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e7/4d8226] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (23)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:13.998 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/13/89368017899549c8d0ade9fa84b75a]
+May-14 15:34:13.998 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/13/89368017899549c8d0ade9fa84b75a
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)` terminated with an error exit status (127)
+May-14 15:34:13.999 [Task monitor] INFO  nextflow.processor.TaskProcessor - [13/893680] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (24)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:14.008 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:14.011 [Task submitter] INFO  nextflow.Session - [12/ef34de] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)
+May-14 15:34:14.017 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/68/858b3569064672d891e654f7552f63]
+May-14 15:34:14.017 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/68/858b3569064672d891e654f7552f63
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)` terminated with an error exit status (127)
+May-14 15:34:14.019 [Task monitor] INFO  nextflow.processor.TaskProcessor - [68/858b35] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (25)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:14.029 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:14.030 [Task submitter] INFO  nextflow.Session - [b3/03361c] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)
+May-14 15:34:14.031 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/a7/67bc446a82fc5e1df68af34a92b49d]
+May-14 15:34:14.032 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/a7/67bc446a82fc5e1df68af34a92b49d
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)` terminated with an error exit status (127)
+May-14 15:34:14.033 [Task monitor] INFO  nextflow.processor.TaskProcessor - [a7/67bc44] NOTE: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (26)` terminated with an error exit status (127) -- Execution is retried (3)
+May-14 15:34:14.043 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:14.044 [Task submitter] INFO  nextflow.Session - [41/48fc7c] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)
+May-14 15:34:14.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/12/ef34de30cea68ee1f3bd042dfbe4e3]
+May-14 15:34:14.199 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/12/ef34de30cea68ee1f3bd042dfbe4e3
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127)
+May-14 15:34:14.219 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)'
+
+Caused by:
+  Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127)
+
+Command executed:
+
+  fgbio --compression 1 FastqToBam -i AACCACATCCATAGAC/*R1.fastq AACCACATCCATAGAC/*R1.fastq           -r 16B12M +T -o unmapped.bam --sample MDA_clones --library UMI
+  samtools fastq unmapped.bam | bwa mem -t 16 -p -K 150000000 -Y /Users/ieo6943/Documents/Guido/data/MDA_clones/fasta_ref/cassette.up.fa - |           fgbio -Xmx4g --compression 1 --async-io ZipperBams --unmapped unmapped.bam           --ref /Users/ieo6943/Documents/Guido/data/MDA_clones/fasta_ref/cassette.up.fa --output mapped.bam
+  fgbio GroupReadsByUmi -s Identity -e 0 -i mapped.bam -o grouped.bam --raw-tag RX -T MI    
+  fgbio CallMolecularConsensusReads -t RX -i grouped.bam -o consensus.bam -M 3 
+  fgbio FilterConsensusReads -i consensus.bam -o consensus_filtered.bam -r /Users/ieo6943/Documents/Guido/data/MDA_clones/fasta_ref/cassette.up.fa           -M 3 -e 0.1 -N 20 -E 0.025
+  samtools index consensus_filtered.bam
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: fgbio: command not found
+
+Work dir:
+  /Users/ieo6943/Documents/Guido/scratch/Scratch/work/12/ef34de30cea68ee1f3bd042dfbe4e3
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+May-14 15:34:14.228 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (12)` terminated with an error exit status (127)
+May-14 15:34:14.254 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-14 15:34:14.254 [Task submitter] INFO  nextflow.Session - [63/147c1d] Re-submitted process > FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (19)
+May-14 15:34:14.304 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_TSV
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+May-14 15:34:14.307 [main] DEBUG nextflow.Session - Session await > all processes finished
+May-14 15:34:14.307 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-14 15:34:14.316 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (3)
+May-14 15:34:14.339 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b3/03361ca0dff8ff417b231430179716]
+May-14 15:34:14.340 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/b3/03361ca0dff8ff417b231430179716
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13)` terminated with an error exit status (127)
+May-14 15:34:14.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 104; name: FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); status: COMPLETED; exit: 127; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/41/48fc7c214b280371616033d1b39b14]
+May-14 15:34:14.344 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14); work-dir=/Users/ieo6943/Documents/Guido/scratch/Scratch/work/41/48fc7c214b280371616033d1b39b14
+  error [nextflow.exception.ProcessFailedException]: Process `FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (14)` terminated with an error exit status (127)
+May-14 15:34:14.348 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+May-14 15:34:14.360 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill FILTERING_COLLAPSING:filtering_collapsing:CONSENSUS_BAM (13) -- command: kill -TERM 14151; exit: 1 
+ bash: line 0: kill: (14151) - No such process
+
+May-14 15:34:14.397 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=90; ignoredCount=0; cachedCount=0; pendingCount=26; submittedCount=1; runningCount=-2; retriesCount=86; abortedCount=1; succeedDuration=0ms; failedDuration=7.9s; cachedDuration=0ms;loadCpus=-2; loadMemory=0; peakRunning=8; peakCpus=8; peakMemory=8 GB; ]
+May-14 15:34:14.397 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+May-14 15:34:14.446 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+May-14 15:34:14.490 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

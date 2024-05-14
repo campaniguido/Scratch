@@ -20,7 +20,7 @@ process CONSENSUS_BAM {
           -r 16B12M +T -o unmapped.bam --sample MDA_clones --library UMI
     samtools fastq unmapped.bam | bwa mem -t 16 -p -K 150000000 -Y ${params.ref} - | \
           fgbio -Xmx4g --compression 1 --async-io ZipperBams --unmapped unmapped.bam \
-          --ref ${ref} --output mapped.bam
+          --ref ${params.ref} --output mapped.bam
     fgbio GroupReadsByUmi -s Identity -e 0 -i mapped.bam -o grouped.bam --raw-tag RX -T MI    
     fgbio CallMolecularConsensusReads -t RX -i grouped.bam -o consensus.bam -M ${params.min_reads} 
     fgbio FilterConsensusReads -i consensus.bam -o consensus_filtered.bam -r ${params.ref} \

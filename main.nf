@@ -32,8 +32,7 @@ workflow FILTERING_COLLAPSING {
 //
 
 // Mock
-workflow  {
-    
+workflow  { 
+       
     FILTERING_COLLAPSING()
-
 }
