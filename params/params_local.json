@@ -1,0 +1,7 @@
+{
+    "path_data" : "/Users/ieo6943/Documents/Guido/data/MDA_clones/AATGAAGTCTAGGCAT/cbc",
+    "outdir" : "/Users/ieo6943/Documents/Guido/data/",
+    "logdir" : "/Users/ieo6943/Documents/Guido/data/",
+    "min_reads" : 3,
+    "ref" : "/Users/ieo6943/Documents/Guido/data/MDA_clones/fasta_ref/cassette.up.fa"
+}

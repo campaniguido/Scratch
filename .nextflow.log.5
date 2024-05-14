@@ -1,0 +1,245 @@
+May-13 19:27:22.908 [main] DEBUG nextflow.cli.Launcher - $> nextflow run collapsing_filtering.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
+May-13 19:27:23.011 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+May-13 19:27:23.037 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/ieo6943/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+May-13 19:27:23.056 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-13 19:27:23.057 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-13 19:27:23.060 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-13 19:27:23.070 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-13 19:27:23.087 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/ieo6943/Documents/Guido/scratch/Scratch/config/nextflow.config
+May-13 19:27:23.087 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/ieo6943/Documents/Guido/scratch/Scratch/config/nextflow.config
+May-13 19:27:23.120 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `mamba_local`
+May-13 19:27:23.769 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [mamba_local]
+May-13 19:27:23.800 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+May-13 19:27:23.822 [main] INFO  nextflow.cli.CmdRun - Launching `collapsing_filtering.nf` [extravagant_hawking] DSL2 - revision: bfb8dfadfb
+May-13 19:27:23.823 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-13 19:27:23.823 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-13 19:27:23.835 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/ieo6943/.nextflow/secrets/store.json
+May-13 19:27:23.840 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@756aadfc] - activable => nextflow.secret.LocalSecretsProvider@756aadfc
+May-13 19:27:23.911 [main] DEBUG nextflow.Session - Session UUID: c7fe6421-f539-4225-86ca-2a762a2d4041
+May-13 19:27:23.911 [main] DEBUG nextflow.Session - Run name: extravagant_hawking
+May-13 19:27:23.912 [main] DEBUG nextflow.Session - Executor pool size: 8
+May-13 19:27:23.921 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+May-13 19:27:23.927 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+May-13 19:27:23.950 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (23:01 CEST)
+  System: Mac OS X 14.1.2
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 4037@192.168.1.57 [192.168.1.57]
+  CPUs: 8 - Mem: 16 GB (26.1 MB) - Swap: 2 GB (986.8 MB)
+May-13 19:27:23.962 [main] DEBUG nextflow.Session - Work-dir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work [Mac OS X]
+May-13 19:27:23.982 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-13 19:27:23.992 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-13 19:27:24.016 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-13 19:27:24.029 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+May-13 19:27:24.107 [main] DEBUG nextflow.Session - Session start
+May-13 19:27:24.111 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/ieo6943/Documents/Guido/scratch/Scratch/trace.txt
+May-13 19:27:24.467 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-13 19:27:24.625 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-13 19:27:24.626 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-13 19:27:24.633 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+May-13 19:27:24.640 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+May-13 19:27:24.643 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-13 19:27:24.719 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-13 19:27:24.719 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-13 19:27:24.736 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CONSENSUS_BAM, CONSENSUS_TSV
+May-13 19:27:24.741 [main] WARN  nextflow.Session - There's no process matching config selector: Make_Consensus_Reads_tsv
+May-13 19:27:24.791 [main] DEBUG nextflow.Session - Igniting dataflow network (3)
+May-13 19:27:24.798 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CONSENSUS_BAM
+May-13 19:27:24.800 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CONSENSUS_TSV
+May-13 19:27:24.800 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_3161748a11ee10a1: /Users/ieo6943/Documents/Guido/scratch/Scratch/collapsing_filtering.nf
+May-13 19:27:24.800 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+May-13 19:27:24.800 [main] DEBUG nextflow.Session - Session await
+May-13 19:27:24.802 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/ieo6943/Documents/Guido/data/MDA_clones/AATGAAGTCTAGGCAT/cbc/; pattern: *; options: [type:dir]
+May-13 19:27:24.945 [Actor Thread 4] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `ref` -- Initialise it to a default value eg. `params.ref = some_value`
+May-13 19:27:25.032 [Task submitter] WARN  n.executor.BashWrapperBuilder - Task runtime metrics are not reported when using macOS without a container engine
+May-13 19:27:25.049 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.052 [Task submitter] INFO  nextflow.Session - [94/15745f] Submitted process > CONSENSUS_BAM (4)
+May-13 19:27:25.061 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.062 [Task submitter] INFO  nextflow.Session - [3f/106df3] Submitted process > CONSENSUS_BAM (3)
+May-13 19:27:25.075 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.075 [Task submitter] INFO  nextflow.Session - [c5/088ad3] Submitted process > CONSENSUS_BAM (7)
+May-13 19:27:25.085 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.085 [Task submitter] INFO  nextflow.Session - [08/e21343] Submitted process > CONSENSUS_BAM (1)
+May-13 19:27:25.096 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.096 [Task submitter] INFO  nextflow.Session - [e5/40491a] Submitted process > CONSENSUS_BAM (6)
+May-13 19:27:25.106 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.107 [Task submitter] INFO  nextflow.Session - [02/f03251] Submitted process > CONSENSUS_BAM (5)
+May-13 19:27:25.115 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.116 [Task submitter] INFO  nextflow.Session - [c9/724377] Submitted process > CONSENSUS_BAM (2)
+May-13 19:27:25.126 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.128 [Task submitter] INFO  nextflow.Session - [2d/9209af] Submitted process > CONSENSUS_BAM (8)
+May-13 19:27:25.201 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: CONSENSUS_BAM (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/94/15745fff87d8b636121d2428d72b8c]
+May-13 19:27:25.212 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.212 [Task submitter] INFO  nextflow.Session - [6c/87963f] Submitted process > CONSENSUS_BAM (10)
+May-13 19:27:25.250 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: CONSENSUS_BAM (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/3f/106df3625853127ec3c5d92b58886d]
+May-13 19:27:25.258 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.258 [Task submitter] INFO  nextflow.Session - [d4/339345] Submitted process > CONSENSUS_BAM (15)
+May-13 19:27:25.264 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: CONSENSUS_BAM (7); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c5/088ad3e4913fbeacf4665bce534955]
+May-13 19:27:25.271 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.271 [Task submitter] INFO  nextflow.Session - [be/0b1df7] Submitted process > CONSENSUS_BAM (9)
+May-13 19:27:25.276 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: CONSENSUS_BAM (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/08/e213434e59064b656800f5908be70d]
+May-13 19:27:25.287 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.287 [Task submitter] INFO  nextflow.Session - [41/a0494d] Submitted process > CONSENSUS_BAM (11)
+May-13 19:27:25.288 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: CONSENSUS_BAM (6); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/e5/40491aaf5e7b26f01673b4cc40a206]
+May-13 19:27:25.301 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: CONSENSUS_BAM (5); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/02/f03251dce23d46a181f34d9d5334e5]
+May-13 19:27:25.301 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.303 [Task submitter] INFO  nextflow.Session - [d9/fae3fe] Submitted process > CONSENSUS_BAM (12)
+May-13 19:27:25.329 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.332 [Task submitter] INFO  nextflow.Session - [8a/b02e3b] Submitted process > CONSENSUS_BAM (13)
+May-13 19:27:25.334 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: CONSENSUS_BAM (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c9/72437721e77d91d448537709232c31]
+May-13 19:27:25.357 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: CONSENSUS_BAM (8); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/2d/9209af97a128e012d7c338ab7744e6]
+May-13 19:27:25.357 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.358 [Task submitter] INFO  nextflow.Session - [b0/d73573] Submitted process > CONSENSUS_BAM (19)
+May-13 19:27:25.375 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: CONSENSUS_BAM (10); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/6c/87963f3dae0d99531b8356e7f2be14]
+May-13 19:27:25.377 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.377 [Task submitter] INFO  nextflow.Session - [b1/ef5c83] Submitted process > CONSENSUS_BAM (14)
+May-13 19:27:25.393 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: CONSENSUS_BAM (15); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d4/33934540f84a7e9899f92244e5c100]
+May-13 19:27:25.396 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.397 [Task submitter] INFO  nextflow.Session - [46/00e696] Submitted process > CONSENSUS_BAM (16)
+May-13 19:27:25.414 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: CONSENSUS_BAM (9); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/be/0b1df714d764d073f30328a3297cec]
+May-13 19:27:25.427 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: CONSENSUS_BAM (11); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/41/a0494da9e7bc7e80989e574fe8c433]
+May-13 19:27:25.434 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: CONSENSUS_BAM (12); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d9/fae3fec8247637141fff180f47dc23]
+May-13 19:27:25.440 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.441 [Task submitter] INFO  nextflow.Session - [f3/981f21] Submitted process > CONSENSUS_BAM (17)
+May-13 19:27:25.455 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.456 [Task submitter] INFO  nextflow.Session - [83/1d7d0f] Submitted process > CONSENSUS_BAM (18)
+May-13 19:27:25.476 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: CONSENSUS_BAM (13); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/8a/b02e3b35895ff96ce71a1b1b49c67c]
+May-13 19:27:25.481 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: CONSENSUS_BAM (19); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b0/d73573ef4e1155725bf52dc2cfaef3]
+May-13 19:27:25.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: CONSENSUS_BAM (14); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b1/ef5c831c4178b099e318ef39936d08]
+May-13 19:27:25.521 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.523 [Task submitter] INFO  nextflow.Session - [64/72609b] Submitted process > CONSENSUS_BAM (25)
+May-13 19:27:25.534 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.535 [Task submitter] INFO  nextflow.Session - [95/e6c8fd] Submitted process > CONSENSUS_BAM (20)
+May-13 19:27:25.550 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.551 [Task submitter] INFO  nextflow.Session - [09/9e8957] Submitted process > CONSENSUS_BAM (21)
+May-13 19:27:25.564 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: CONSENSUS_BAM (16); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/46/00e696f983189f0efbf3daa3ad8f85]
+May-13 19:27:25.566 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.568 [Task submitter] INFO  nextflow.Session - [2e/19b66c] Submitted process > CONSENSUS_BAM (22)
+May-13 19:27:25.593 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: CONSENSUS_BAM (17); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/f3/981f2198ab05525e0955cfd8754b74]
+May-13 19:27:25.601 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.602 [Task submitter] INFO  nextflow.Session - [5c/8aaf66] Submitted process > CONSENSUS_BAM (29)
+May-13 19:27:25.604 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: CONSENSUS_BAM (18); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/83/1d7d0fe035492c6ef5391de3ad4067]
+May-13 19:27:25.616 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.624 [Task submitter] INFO  nextflow.Session - [15/2c780a] Submitted process > CONSENSUS_BAM (23)
+May-13 19:27:25.641 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.642 [Task submitter] INFO  nextflow.Session - [ba/5da3f2] Submitted process > CONSENSUS_BAM (24)
+May-13 19:27:25.661 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: CONSENSUS_BAM (25); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/64/72609b970811b46cf008aa93d0a27b]
+May-13 19:27:25.667 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: CONSENSUS_BAM (20); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/95/e6c8fd2c66b031c3309efd81db3d9b]
+May-13 19:27:25.697 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: CONSENSUS_BAM (21); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/09/9e895788c6f201ab8e93ba7d46659d]
+May-13 19:27:25.700 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: CONSENSUS_BAM (22); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/2e/19b66c1e324b52e6e926b818813fc7]
+May-13 19:27:25.708 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.708 [Task submitter] INFO  nextflow.Session - [18/0f57e0] Submitted process > CONSENSUS_BAM (26)
+May-13 19:27:25.721 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.724 [Task submitter] INFO  nextflow.Session - [73/89b066] Submitted process > CONSENSUS_BAM (27)
+May-13 19:27:25.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: CONSENSUS_BAM (29); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/5c/8aaf662877c7f19cfd1bd7473a52ca]
+May-13 19:27:25.740 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: CONSENSUS_BAM (23); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/15/2c780ab0ed68020beae766466074bd]
+May-13 19:27:25.752 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.757 [Task submitter] INFO  nextflow.Session - [ca/e63425] Submitted process > CONSENSUS_BAM (28)
+May-13 19:27:25.763 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: CONSENSUS_BAM (24); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/ba/5da3f28a783aa476609db0642741a9]
+May-13 19:27:25.775 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.776 [Task submitter] INFO  nextflow.Session - [39/8d67d6] Submitted process > CONSENSUS_BAM (30)
+May-13 19:27:25.789 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.790 [Task submitter] INFO  nextflow.Session - [7f/5a19ab] Submitted process > CONSENSUS_TSV (1)
+May-13 19:27:25.800 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.800 [Task submitter] INFO  nextflow.Session - [9b/f192f2] Submitted process > CONSENSUS_TSV (2)
+May-13 19:27:25.834 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: CONSENSUS_BAM (26); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/18/0f57e07a68f790c05fda779ec13e88]
+May-13 19:27:25.865 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: CONSENSUS_BAM (27); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/73/89b06629c2d06738ec033dddff6edb]
+May-13 19:27:25.885 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: CONSENSUS_BAM (28); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/ca/e63425daf8b8adc73ac7597b1b5e93]
+May-13 19:27:25.911 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: CONSENSUS_BAM (30); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/39/8d67d624ff978f2a4497ea19145160]
+May-13 19:27:25.921 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.921 [Task submitter] INFO  nextflow.Session - [b1/cefbe8] Submitted process > CONSENSUS_TSV (3)
+May-13 19:27:25.929 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: CONSENSUS_TSV (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/7f/5a19ab71c399140b9f54daf0b45499]
+May-13 19:27:25.939 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: CONSENSUS_TSV (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/9b/f192f264bc6e998b26a05909a84c0c]
+May-13 19:27:25.944 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.945 [Task submitter] INFO  nextflow.Session - [d3/951c73] Submitted process > CONSENSUS_TSV (4)
+May-13 19:27:25.983 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.983 [Task submitter] INFO  nextflow.Session - [b5/ccb6ff] Submitted process > CONSENSUS_TSV (5)
+May-13 19:27:25.992 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:25.992 [Task submitter] INFO  nextflow.Session - [82/003eb5] Submitted process > CONSENSUS_TSV (6)
+May-13 19:27:26.026 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.028 [Task submitter] INFO  nextflow.Session - [3b/0c533b] Submitted process > CONSENSUS_TSV (7)
+May-13 19:27:26.054 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: CONSENSUS_TSV (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b1/cefbe80f559759138473f8095b766e]
+May-13 19:27:26.061 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.064 [Task submitter] INFO  nextflow.Session - [06/1aaa06] Submitted process > CONSENSUS_TSV (8)
+May-13 19:27:26.073 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: CONSENSUS_TSV (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d3/951c733defd26f94bb4bfb188b2514]
+May-13 19:27:26.109 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.111 [Task submitter] INFO  nextflow.Session - [d3/336816] Submitted process > CONSENSUS_TSV (9)
+May-13 19:27:26.113 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: CONSENSUS_TSV (5); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b5/ccb6fff7c7c8dbddcf8e7b31a2378c]
+May-13 19:27:26.123 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.124 [Task submitter] INFO  nextflow.Session - [7e/1fdf69] Submitted process > CONSENSUS_TSV (10)
+May-13 19:27:26.127 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: CONSENSUS_TSV (6); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/82/003eb581ccd1fdd00e5e94d4f5ebe4]
+May-13 19:27:26.135 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.135 [Task submitter] INFO  nextflow.Session - [b0/e7d49d] Submitted process > CONSENSUS_TSV (11)
+May-13 19:27:26.157 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: CONSENSUS_TSV (7); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/3b/0c533ba431f40495cc6b2391093af1]
+May-13 19:27:26.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: CONSENSUS_TSV (8); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/06/1aaa069db2008433873899e7491e02]
+May-13 19:27:26.206 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.207 [Task submitter] INFO  nextflow.Session - [52/0cb04a] Submitted process > CONSENSUS_TSV (12)
+May-13 19:27:26.227 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.228 [Task submitter] INFO  nextflow.Session - [aa/62a103] Submitted process > CONSENSUS_TSV (13)
+May-13 19:27:26.241 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: CONSENSUS_TSV (9); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/d3/3368168783f44e0d045940c417623e]
+May-13 19:27:26.249 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.249 [Task submitter] INFO  nextflow.Session - [3e/51c2fe] Submitted process > CONSENSUS_TSV (14)
+May-13 19:27:26.250 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: CONSENSUS_TSV (10); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/7e/1fdf69f5351e9ec8a03ff12ad49fc7]
+May-13 19:27:26.266 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: CONSENSUS_TSV (11); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/b0/e7d49d878f704aefbc8ec951527d87]
+May-13 19:27:26.277 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.278 [Task submitter] INFO  nextflow.Session - [6a/b4fef8] Submitted process > CONSENSUS_TSV (15)
+May-13 19:27:26.307 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.309 [Task submitter] INFO  nextflow.Session - [04/17573f] Submitted process > CONSENSUS_TSV (16)
+May-13 19:27:26.327 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.336 [Task submitter] INFO  nextflow.Session - [a3/b2abd9] Submitted process > CONSENSUS_TSV (17)
+May-13 19:27:26.345 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: CONSENSUS_TSV (12); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/52/0cb04a61a80c2034cdce408cefc813]
+May-13 19:27:26.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: CONSENSUS_TSV (13); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/aa/62a103cdbeeb952d43ead4d7089490]
+May-13 19:27:26.388 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: CONSENSUS_TSV (14); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/3e/51c2fe70538fd4ce690808d37a30dd]
+May-13 19:27:26.390 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.391 [Task submitter] INFO  nextflow.Session - [ce/200970] Submitted process > CONSENSUS_TSV (18)
+May-13 19:27:26.411 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.412 [Task submitter] INFO  nextflow.Session - [1d/cb7d94] Submitted process > CONSENSUS_TSV (19)
+May-13 19:27:26.419 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: CONSENSUS_TSV (15); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/6a/b4fef858f5b2a8fa93bb39fcf94a8f]
+May-13 19:27:26.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: CONSENSUS_TSV (16); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/04/17573f4fd4334c12f4ef3425345d11]
+May-13 19:27:26.448 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.449 [Task submitter] INFO  nextflow.Session - [0a/79bdb9] Submitted process > CONSENSUS_TSV (20)
+May-13 19:27:26.462 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: CONSENSUS_TSV (17); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/a3/b2abd996ce20b7965174048d3c30d4]
+May-13 19:27:26.471 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.471 [Task submitter] INFO  nextflow.Session - [ce/fd0cf2] Submitted process > CONSENSUS_TSV (21)
+May-13 19:27:26.495 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.495 [Task submitter] INFO  nextflow.Session - [40/68fd3b] Submitted process > CONSENSUS_TSV (22)
+May-13 19:27:26.517 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.518 [Task submitter] INFO  nextflow.Session - [43/d094df] Submitted process > CONSENSUS_TSV (23)
+May-13 19:27:26.523 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: CONSENSUS_TSV (18); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/ce/2009702b9f4392c3637973d10d0cfb]
+May-13 19:27:26.544 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: CONSENSUS_TSV (19); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/1d/cb7d945ec9fd1dc4ccbf1c6b5ae20e]
+May-13 19:27:26.581 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: CONSENSUS_TSV (20); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/0a/79bdb96873f42fca8c63b9d48c11e2]
+May-13 19:27:26.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: CONSENSUS_TSV (21); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/ce/fd0cf20d1b53a758cb3799bd5a7e84]
+May-13 19:27:26.621 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.626 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: CONSENSUS_TSV (22); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/40/68fd3bc247163ae6866c777327d5bf]
+May-13 19:27:26.632 [Task submitter] INFO  nextflow.Session - [c4/223ec7] Submitted process > CONSENSUS_TSV (24)
+May-13 19:27:26.646 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.646 [Task submitter] INFO  nextflow.Session - [f7/8290f8] Submitted process > CONSENSUS_TSV (25)
+May-13 19:27:26.648 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: CONSENSUS_TSV (23); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/43/d094df584084151b9b6ce7c2847ade]
+May-13 19:27:26.659 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.659 [Task submitter] INFO  nextflow.Session - [1a/407f0c] Submitted process > CONSENSUS_TSV (26)
+May-13 19:27:26.672 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.673 [Task submitter] INFO  nextflow.Session - [03/fa4b5c] Submitted process > CONSENSUS_TSV (27)
+May-13 19:27:26.694 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.696 [Task submitter] INFO  nextflow.Session - [6a/46fb01] Submitted process > CONSENSUS_TSV (28)
+May-13 19:27:26.721 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.721 [Task submitter] INFO  nextflow.Session - [1d/3e4f3f] Submitted process > CONSENSUS_TSV (29)
+May-13 19:27:26.759 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-13 19:27:26.773 [Task submitter] INFO  nextflow.Session - [4d/632186] Submitted process > CONSENSUS_TSV (30)
+May-13 19:27:26.790 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: CONSENSUS_TSV (24); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/c4/223ec7568903bf2c4ce630b67fa03a]
+May-13 19:27:26.796 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: CONSENSUS_TSV (25); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/f7/8290f87b864ef447d5e39b61c5b46d]
+May-13 19:27:26.805 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: CONSENSUS_TSV (26); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/1a/407f0c53c65457ed99f77958a37302]
+May-13 19:27:26.812 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: CONSENSUS_TSV (27); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/03/fa4b5c501d7ffc1c9c885371e385e5]
+May-13 19:27:26.833 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: CONSENSUS_TSV (28); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/6a/46fb0116a7fa3ee4673ab194c42f23]
+May-13 19:27:26.857 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: CONSENSUS_TSV (29); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/1d/3e4f3f5f9af0ee2a315bf7960f9804]
+May-13 19:27:26.881 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: CONSENSUS_TSV (30); status: COMPLETED; exit: 0; error: -; workDir: /Users/ieo6943/Documents/Guido/scratch/Scratch/work/4d/632186814b1252aa0295cb68ed9c20]
+May-13 19:27:26.883 [main] DEBUG nextflow.Session - Session await > all processes finished
+May-13 19:27:26.888 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+May-13 19:27:26.889 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-13 19:27:26.917 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=60; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=8; peakCpus=8; peakMemory=0; ]
+May-13 19:27:26.918 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+May-13 19:27:27.121 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+May-13 19:27:27.142 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+May-13 19:27:27.142 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
