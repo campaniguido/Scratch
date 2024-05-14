@@ -34,6 +34,6 @@ workflow FILTERING_COLLAPSING {
 // Mock
 workflow  {
     
-    FILTERING_COLLAPSING() | view
+    FILTERING_COLLAPSING()
 
 }

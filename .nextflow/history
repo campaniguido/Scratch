@@ -39,3 +39,6 @@
 2024-05-14 14:28:22	-	stupefied_hilbert	-	a8eb7344533d3467c9360aa467ee243a	f224c4d4-f2d8-436c-a233-8b7837d4b47e	nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
 2024-05-14 14:30:10	-	trusting_bose	-	a8eb7344533d3467c9360aa467ee243a	82688350-a2d9-4a2a-a007-6fd807c29dc0	nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
 2024-05-14 14:30:37	-	goofy_wescoff	-	a8eb7344533d3467c9360aa467ee243a	3e709d64-ed91-4a62-8265-ae3ed6ee624c	nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
+2024-05-14 15:08:56	-	tiny_hilbert	-	a8eb7344533d3467c9360aa467ee243a	fb7f151e-8d07-4b99-9e41-9ad86a1f7e5d	nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
+2024-05-14 15:14:50	-	awesome_visvesvaraya	-	a8eb7344533d3467c9360aa467ee243a	a1fe2b40-df0f-4d1b-9c70-6b6128dc1c5b	nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
+2024-05-14 15:16:09	2.1s	tiny_mcnulty	OK	9d2bcf9bce37440af44c51cf5388c0c2	02659ac6-e634-4718-8ff3-bc1d9196b4ff	nextflow run main.nf -params-file params/params_local.json -profile mamba_local -c config/nextflow.config -stub
