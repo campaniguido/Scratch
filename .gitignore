@@ -1,0 +1,6 @@
+
+
+# Nextflow
+./work
+./trace*
+./.nextflow*
