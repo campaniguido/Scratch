@@ -1,8 +1,8 @@
 
 
 # Nextflow
-./work
-./trace*
-./.nextflow*
+/work/
+/trace*
+/.nextflow*
 trace.txt
-.nextflow.log
+.nextflow.log*
