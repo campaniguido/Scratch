@@ -9,11 +9,7 @@ include { filtering_collapsing } from "./subworkflows/filtering_collapsing/main"
     
 channel_i=Channel
     .fromPath("${params.path_data}/*", type:'dir')
-    .map{ tuple(it.getName(), it.toString()) }
-
-
-// Add view to print the contents of channel_i
-channel_i.view { "Contents of channel_i: $it" }
+    .map{ tuple(it.getName(), it) }
 
 //
 

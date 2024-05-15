@@ -8,12 +8,12 @@ nextflow.enable.dsl = 2
 process CONSENSUS_TSV {
 
     tag "${cell}"
+
     input:
     tuple val(cell), path(consensus_filtered_bam)
         
-
     output:
-    tuple val(cell), path("consensus_filtered.tsv"), emit: consensus_filtered_tsv
+    tuple val(cell), path("${cell}_consensus_filtered.tsv"), emit: consensus_filtered_tsv
 
     script:
     """
@@ -24,8 +24,7 @@ process CONSENSUS_TSV {
 
     stub:
     """
-    touch consensus_filtered.tsv
-    echo ${cell}
+    touch ${cell}_consensus_filtered.tsv
     """
 
 }
