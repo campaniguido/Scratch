@@ -22,7 +22,7 @@ workflow filtering_collapsing {
  
         // Merge reads and Solo
         CONSENSUS_BAM(ch_input)
-        CONSENSUS_TSV(CONSENSUS_BAM.out.consensus_filtered_bam) //devo sincronizzare in qualche modo?
+        CONSENSUS_TSV(CONSENSUS_BAM.out.consensus_filtered_bam) 
     
 
     emit:
