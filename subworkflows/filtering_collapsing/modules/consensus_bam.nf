@@ -5,7 +5,7 @@ nextflow.enable.dsl = 2
 
 process CONSENSUS_BAM {
 
-
+      tag "${cell}"
     input:
     tuple val(cell), path(cell_folder)
         
@@ -31,6 +31,8 @@ process CONSENSUS_BAM {
     stub:
     """
     touch consensus_filtered.bam
+    echo ${cell}
+
     """
 
 }

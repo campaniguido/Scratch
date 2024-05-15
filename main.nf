@@ -22,17 +22,9 @@ channel_i=Channel
 
 //
 
-workflow FILTERING_COLLAPSING {
+workflow {
 
     filtering_collapsing(channel_i)
     filtering_collapsing.out.tsv.view()
 
-}
-
-//
-
-// Mock
-workflow  { 
-       
-    FILTERING_COLLAPSING()
 }
